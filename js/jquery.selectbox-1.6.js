@@ -1,12 +1,15 @@
 /*
  * jQuery selectbox plugin
  *
- * Copyright (c) 2007 Sadri Sahraoui (brainfault.com)
- * Licensed under the GPL license and MIT:
- *   http://www.opensource.org/licenses/GPL-license.php
- *   http://www.opensource.org/licenses/mit-license.php
+ * Software License Agreement (BSD License)
+ * see license.txt
  *
- * The code is inspired from Autocomplete plugin (http://www.dyve.net/jquery/?autocomplete)
+ * Copyright (c) 2011, Andre Hayter (ahsquared.com)
+ * All rights reserved.
+ *
+ * 
+ * The code is inspired from Sadri Sahraoui (brainfault.com) selectbox plugin
+ * which in turn was inspired by Autocomplete plugin (http://www.dyve.net/jquery/?autocomplete)
  *
  * Revision: $Id$
  * Version: 1.6
@@ -24,27 +27,7 @@
  *  - fixed scroll issues with IE6, 7, 8
  *  - fixed issues with zindex and IE6
  *  - fixed maxHeight calculation when hidden - in a lightbox for example
- *  Version 1.2 By Guillaume Vergnolle (web-opensource.com)
- *  - Add optgroup support
- *  - possibility to choose between span or input as replacement of the select box
- *  - support for jquery change event
- *  - add a max height option for drop down list
- *  Version 1.1 
- *  - Fix IE bug
- *  Version 1.0
- *  - Support jQuery noConflict option 
- *  - Add callback for onChange event, thanks to Jason
- *  - Fix IE8 support
- *  - Fix auto width support
- *  - Fix focus on firefox dont show the carret
- *  Version 0.6
- *  - Fix IE scrolling problem
- *  Version 0.5 
- *  - separate css style for current selected element and hover element which solve the highlight issue 
- *  Version 0.4
- *  - Fix width when the select is in a hidden div   @Pawel Maziarz
- *  - Add a unique id for generated li to avoid conflict with other selects and empty values @Pawel Maziarz
- *
+ *  Version 1.0 by Andre Hayter
  */
  /* global jQuery
  */
