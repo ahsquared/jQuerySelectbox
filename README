@@ -3,3 +3,29 @@ Selectbox is a jQuery plugin for styling html select boxes.
 Selectbox hides the html element and creates an html simulation of a select box.
 
 All the manipulation (click, selecting, etc) is mirrored to the hidden select element so that any form posting, etc can still be done using the native element. This also means that if it doesn't load the form will still work normally just minus pretty styling.
+
+Implementation:
+1. You need jquery for this to work so add it to your web page:
+   <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+   This works if you have downloaded it, you can also just use one from one of the CDNs. See: http://docs.jquery.com/Downloading_jQuery
+
+2. Add the library to your html code. It is best to do this at the bottom of the page just before the close body tag (</body>).
+   Like so: <script type="text/javascript" src="js/jquery.selectbox-1.6.js"></script>
+	 
+3. Call the function on a selectbox, like so:
+   $('#test, #some').selectbox();
+	 This should be done as part of $(document).ready(function($){ 
+	 	 $('#test, #test2').selectbox({
+				simple: false, //true is the default
+				maxHeight: 110
+		 });
+	 });
+
+4. You can pass arguments to selectbox, such as:
+   simple: false - this adds more element to the dropdown so that you can style more complex designs. Adds a top and bottom element
+	    By default this is true and just creates one element for the dropdown.
+	 wrapper: 'myClassName' - you can change the names of the classes used to style the dropdown
+	 See the js file for all the possible arguments and the css for the default styling
+
+5. Setup your css to create your fancy selectbox
+   See css/selectbox.css for a simple example
