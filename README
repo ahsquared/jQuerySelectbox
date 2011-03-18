@@ -14,11 +14,12 @@ Implementation:
 	 
 3. Call the function on a selectbox, like so:
    $('#test, #some').selectbox();
-	 This should be done as part of $(document).ready(function($){ 
-	 	 $('#test, #test2').selectbox({
-				simple: false, //true is the default
-				maxHeight: 110
-		 });
+	 This should be done as part of 
+	 $(document).ready(function($){ 
+	 	$('#test, #test2').selectbox({
+			simple: false, //true is the default
+			maxHeight: 110
+		});
 	 });
 
 4. You can pass arguments to selectbox, such as:
