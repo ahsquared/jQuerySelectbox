@@ -1,0 +1,59 @@
+body {}
+.container {
+	width: 900px;
+	margin: 0 auto;
+}
+.select_wrapper {
+	position: relative;
+	float: left;
+}
+.selectbox {
+	background: url(/Asset/img/dropdown_bgrd_171.gif) no-repeat scroll top left;
+	border: 1px solid #00a9e0;
+	cursor: pointer;
+	overflow: hidden;
+	text-align: left;
+	text-decoration: none;
+	height: 25px;
+	width: 100px;
+	padding: 0 30px 0 10px;
+	float: left;
+	line-height: 25px;
+	outline: none;
+	font-size: 14px;
+}
+.dd_wrapper {
+	font-size: 14px;
+	position: absolute;
+	background: #ffffff;
+	border: 1px solid #00a9e0;
+}
+.dd_wrapper_top, .dd_wrapper_bottom {
+	height: 1px;
+	background: #ffffff;
+	border-left: 1px solid #00a9e0;
+	border-right: 1px solid #00a9e0;
+	border-top: 1px solid #00a9e0;
+	position: absolute;
+}
+
+.dd_list_container {
+	overflow: auto;
+}
+.dd_wrapper_bottom {
+	border-bottom: 1px solid #00a9e0;
+	border-top: none;
+}
+.dd_list_container ul {
+	padding: 0px 0 0 5px;
+	list-style: none inside;
+	margin: 0;
+}
+.dd_list_container ul li {
+	padding: 6px 7px;
+	font-size: 1em;
+	line-height: 1.2em;
+}
+.dd_list_container .dd_current {
+	background: #d1e5ee;
+}

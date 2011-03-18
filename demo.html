@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Selectbox Demo</title>
+<link type="text/css" rel="stylesheet" href="css/selectbox.css" />
+</head>
+
+<body>
+<div class="container">
+	<h2>Select Box Demo</h2>
+	<p>The select box below is linked to a hidden real selectbox that can be used as part of a form.</p>
+	<select id="test">
+		<option value="one">One</option>
+		<option value="two">Two</option>
+		<option value="three">Three is really long</option>
+		<option value="four" selected="selected">Four</option>
+		<option value="five">Five is also really long</option>
+		<option value="six">Six</option>
+	</select>
+	<select id="some">
+		<option value="one">One</option>
+		<option value="two">Two</option>
+		<option value="three">Three is really long</option>
+		<option value="four" selected="selected">Four</option>
+		<option value="five">Five is also really long</option>
+		<option value="six">Six</option>
+	</select>
+</div>
+<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.selectbox-1.6.js"></script>
+
+<script type="text/javascript">
+$( function () {
+    $('#test, #some').selectbox();
+});
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,5 @@
+Selectbox is a jQuery plugin for styling html select boxes.
+
+Selectbox hides the html element and creates an html simulation of a select box.
+
+All the manipulation (click, selecting, etc) is mirrored to the hidden select element so that any form posting, etc can still be done using the native element. This also means that if it doesn't load the form will still work normally just minus pretty styling.
