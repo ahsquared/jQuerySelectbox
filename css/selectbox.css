@@ -21,12 +21,25 @@ body {}
 	line-height: 25px;
 	outline: none;
 	font-size: 14px;
+	border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	-khtml-border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	
 }
 .dd_wrapper {
 	font-size: 14px;
 	position: absolute;
 	background: #ffffff;
 	border: 1px solid #00a9e0;
+	border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	-khtml-border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	box-shadow: 0 0 9px #666666;
+	-webkit-box-shadow: 0 0 9px #666666;
+	-khtml-box-shadow: 0 0 9px #666666;
+	-moz-box-shadow: 0 0 9px #666666;
 }
 .dd_wrapper_top, .dd_wrapper_bottom {
 	height: 1px;
@@ -56,4 +69,7 @@ body {}
 }
 .dd_list_container .dd_current {
 	background: #d1e5ee;
+}
+.dd_list_container .dd_selected {
+	text-shadow: 0 0 3px #666666;
 }
