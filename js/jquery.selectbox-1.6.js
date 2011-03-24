@@ -252,7 +252,7 @@ jQuery.SelectBox = function(selectobj, options, index) {
 		$ddWrapper.attr('id', elm_id+'_dd_wrapper');
 		$ddWrapper.addClass(options.dropdownWrapper);
 		$ddWrapper.css({
-			'display': 'none',
+			'display': 'none'
 		});
 		return $ddWrapper;
 	}
