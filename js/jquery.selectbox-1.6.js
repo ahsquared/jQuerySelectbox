@@ -12,7 +12,7 @@
  * which in turn was inspired by Autocomplete plugin (http://www.dyve.net/jquery/?autocomplete)
  *
  * Revision: $Id$
- * Version: 1.6
+ * Version: 1.6.1
  * 
  * Changelog :
  *  Version 1.6 by Andre Hayter
@@ -83,6 +83,7 @@ jQuery.SelectBox = function(selectobj, options, index) {
 	var widthCalculated = false;
 	var ddWrapperBottomOffset = 0;
 	var hasfocus = 0;
+	var contFocus = false;
 
 		//jquery object for select element
 	var $select = jQuery(selectobj);
@@ -154,36 +155,28 @@ jQuery.SelectBox = function(selectobj, options, index) {
 		}
 	})
 	.blur(function() {
-		if ($listContainer.is(':visible') && hasfocus > 0 ) {
-			if(opt.debug) {
-				//console.log('ddWrapper visible and has focus');
-			}
+		// if mouse still in container don't fire blur
+		// to prevent IE firing blur when click on scrollbar
+		if (!contFocus) {
+		  hideMe();
 		} else {
-			// Workaround for ie scroll - thanks to Bernd Matzner
-			if((jQuery.browser.msie && jQuery.browser.version.substr(0,1) <= 8) || jQuery.browser.safari){ // check for safari too - workaround for webkit
-				if (document.activeElement.getAttribute('id') !== null) {
-					if(document.activeElement.getAttribute('id').indexOf('_list_container')==-1){
-						hideMe();
-					} else {
-						if (jQuery.browser.msie && jQuery.browser.version.substr(0,1) == 8) {
-							$input.focus();
-							return; //alert("IE8");
-						} else {
-							$input.focus();
-						}
-					}
-				} else {
-					hideMe();
-				}
-			} else {
-				hideMe();
-			}
-			hideMe();
+		  $(this).focus();
 		}
 	});
 	
+	$selectWrapper.mouseenter(function () {
+		contFocus = true;
+	});
+	$selectWrapper.mouseleave(function () {
+		contFocus = false;
+		//hideMe();
+	});
+
+	
 	function hideMe() { 
 		hasfocus = 0;
+		inFocus = false;
+		contFocus = false;
 		$ddWrapper.hide(); 
 		if (!opt.simple) {
 			$ddWrapperTop.hide();
