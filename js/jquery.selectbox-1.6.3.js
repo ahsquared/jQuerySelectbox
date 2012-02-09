@@ -241,7 +241,6 @@ jQuery.SelectBox = function (selectobj, options, index) {
     $ddWrapper.parent().css('zIndex', options.zIndex);
     var wd = $input.outerWidth();
     $ddWrapper.width(wd);
-    setCurrent();
   }
 
   function setupDdWrapper(options) {
@@ -359,7 +358,7 @@ jQuery.SelectBox = function (selectobj, options, index) {
     } else {
       $select.find('option:selected').removeAttr('selected');
       $select.children('option[value="' + el + '"]').prop('selected', 'selected');
-      $select.change();
+	  $select.change();
     }
     if (opt.inputType == 'span') {
       $input.html($(li).html());
