@@ -12,7 +12,7 @@
  * which in turn was inspired by Autocomplete plugin (http://www.dyve.net/jquery/?autocomplete)
  *
  * Revision: $Id$
- * Version: 1.6.1
+ * Version: 1.6.2
  * 
  * Changelog :
  * Version 1.6.2 by Andre Hayter
