@@ -27,6 +27,11 @@ body {}
 	-moz-border-radius: 4px 4px 4px 4px;
 	
 }
+.disabled .selectbox {
+	cursor: default;
+	color: #ccc;
+	border: 1px solid #444;	
+}
 .dd_wrapper {
 	font-size: 14px;
 	position: absolute;

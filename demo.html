@@ -26,13 +26,21 @@
 		<option value="five">Five is also really long</option>
 		<option value="six">Six</option>
 	</select>
+	<select id="disabled" disabled="disabled">
+		<option value="one">One</option>
+		<option value="two" selected>Two</option>
+		<option value="three">Three is really long</option>
+		<option value="four">Four</option>
+		<option value="five">Five is also really long</option>
+		<option value="six">Six</option>
+	</select>
 </div>
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.selectbox-1.6.3.js"></script>
+<script type="text/javascript" src="js/jquery.selectbox-1.6.4.js"></script>
 
 <script type="text/javascript">
 $( function () {
-    $('#test, #some').selectbox();
+    $('#test, #some, #disabled').selectbox();
 });
 </script>
 
