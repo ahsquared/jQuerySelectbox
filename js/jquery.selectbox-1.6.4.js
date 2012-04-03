@@ -12,9 +12,11 @@
  * which in turn was inspired by Autocomplete plugin (http://www.dyve.net/jquery/?autocomplete)
  *
  * Revision: $Id$
- * Version: 1.6.4
+ * Version: 1.6.5
  * 
  * Changelog :
+ * Version 1.6.5 by Andre Hayter
+ * - fixed an IE7 bug where on onchange function is typed as a string
  * Version 1.6.4 by Andre Hayter
  * - added disabled state
  * Version 1.6.3 by Andre Hayter
@@ -111,7 +113,7 @@ jQuery.SelectBox = function (selectobj, options, index) {
   var $input = setupInput(opt);
   // get the width of the select to pass it to selectbox
   // if the option is set to (by default it is)
-  if (opt.matchWidth) {
+  if (opt.matchWidth && $select.filter(':visible').length > 0) {
   	var width = $select.outerWidth();
   	$input.width(width);
   }
@@ -376,7 +378,13 @@ jQuery.SelectBox = function (selectobj, options, index) {
     } else {
       $select.find('option:selected').removeAttr('selected');
       $select.children('option[value="' + el + '"]').prop('selected', 'selected');
-	  $select.change();
+	  var onChange = $select[0].onchange;
+	  // fix for IE7 typeing onchange contents as a string
+	  if (typeof onChange == "string") {
+		setTimeout(onChange, 0);
+	  } else {
+		$select.change();
+	  }
     }
     if (opt.inputType == 'span') {
       $input.html($(li).html());

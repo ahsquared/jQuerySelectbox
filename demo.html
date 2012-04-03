@@ -10,14 +10,16 @@
 <div class="container">
 	<h2>Select Box Demo</h2>
 	<p>The select box below is linked to a hidden real selectbox that can be used as part of a form.</p>
-	<select id="test">
-		<option value="one">One</option>
-		<option value="two">Two</option>
-		<option value="three">Three is really long</option>
-		<option value="four" selected="selected">Four</option>
-		<option value="five">Five is also really long</option>
-		<option value="six">Six</option>
-	</select>
+	<div class="test">
+		<select id="test">
+			<option value="one">One</option>
+			<option value="two">Two</option>
+			<option value="three">Three is really really really long</option>
+			<option value="four" selected="selected">Four</option>
+			<option value="five">Five is also really long</option>
+			<option value="six">Six</option>
+		</select>
+	</div>
 	<select id="some">
 		<option value="one">One</option>
 		<option value="two" selected>Two</option>
@@ -34,13 +36,19 @@
 		<option value="five">Five is also really long</option>
 		<option value="six">Six</option>
 	</select>
+	<a class="show">show</a>
 </div>
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.selectbox-1.6.4.js"></script>
+<script type="text/javascript" src="js/jquery.selectbox-1.6.5.js"></script>
 
 <script type="text/javascript">
 $( function () {
+	$('.test').css('display', 'none');
     $('#test, #some, #disabled').selectbox();
+	$('.show').click( function() {
+		$('.test, #test').css('display', 'block');
+		$('#test').selectbox();		
+	});
 });
 </script>
 
