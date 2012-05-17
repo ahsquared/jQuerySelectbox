@@ -121,7 +121,11 @@ jQuery.SelectBox = function (selectobj, options, index) {
   	$input.width(width);
   }
   // hide select and append newly created elements
-  $select.css('visibility', 'hidden').before($selectWrapper);
+  $select.css({
+	'visibility': 'hidden',
+	'position': 'absolute',
+	'left':'-9999px'
+	}).before($selectWrapper);
   if (opt.simple) {
     $selectWrapper.append($input).append($ddWrapper);
   } else {
