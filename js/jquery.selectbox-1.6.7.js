@@ -384,7 +384,7 @@ jQuery.SelectBox = function (selectobj, options, index) {
       opt.onChangeCallback(opt.onChangeParams);
     } else {
       $select.find('option:selected').prop('selected', '');
-      $select.children('option[value="' + el + '"]').prop('selected', 'selected');
+      $select.children('option[value="' + el + '"]').prop('selected', 'selected').click();
 	  var onChange = $select[0].onchange;
 	  // fix for IE7 typeing onchange contents as a string
 	  if (typeof onChange == "string") {
